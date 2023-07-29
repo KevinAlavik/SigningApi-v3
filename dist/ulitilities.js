@@ -99,7 +99,7 @@ function genPlist(out) {
             <dict>
                 <key>kind</key>
                 <string>software-package</string>
-                <key>url</key> <string>${config_1.config.serverUrl}/${signedIpaPath.replace(config_1.config.path, '')}</string>
+                <key>url</key> <string>${config_1.config.serverUrl}:${config_1.config.port}/${signedIpaPath.replace(config_1.config.path, '')}</string>
             </dict>
             </array>
             <key>metadata</key>

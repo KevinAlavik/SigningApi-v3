@@ -68,7 +68,7 @@ app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     out = removeEscapeCharacters(out);
     let plistContent = (0, ulitilities_1.genPlist)(out);
     (0, ulitilities_1.createFile)(`./out/signed/${uuid}.plist`, plistContent);
-    res.send(`<meta http-equiv="refresh" content="0;URL=itms-services://?action=download-manifest&url=${config_1.config.serverUrl}/out/signed/${uuid}.plist">`);
+    res.send(`<meta http-equiv="refresh" content="0;URL=itms-services://?action=download-manifest&url=${config_1.config.serverUrl}:${config_1.config.port}/out/signed/${uuid}.plist">`);
     try {
         yield new Promise((resolve) => setTimeout(resolve, 50000));
         yield (0, ulitilities_1.deleteFile)(`out/signed/${uuid}.ipa`);
