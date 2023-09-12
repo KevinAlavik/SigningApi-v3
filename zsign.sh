@@ -78,6 +78,9 @@ main() {
     install_packages
     compile_zsign
     echo "Successfully installed and compiled Zsign"
+    sudo ln zsign/zsign-exec /usr/local/bin/zsign
+    echo "Successfully added zsign to PATH"
+    
 }
 
 main
